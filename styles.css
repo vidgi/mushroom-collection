@@ -1,0 +1,76 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+body {
+  font-family: Karla;
+}
+
+header {
+  position: relative;
+  background-color: #93c4a0;
+  height: 5vh;
+  min-height: 20rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url('cover-video.gif') black no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+model-viewer{
+  width: 100%;
+  height: 250px;
+  /* background-color: rgb(104,97,213);
+  background: linear-gradient(0deg, rgba(104,97,213,1) 1%, rgba(175,242,255,1) 100%); */
+}
+
+
+#card{
+  margin: 3em auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  /* border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25); */
+  overflow: hidden;
+}
